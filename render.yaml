@@ -8,7 +8,7 @@ services:
     envVars:
       - key: NGROK_AUTHTOKEN
         sync: false
-    startCommand: http --log=stdout n8n:5678
+    startCommand: ngrok http n8n:5678 --log=stdout
 
   - type: web
     name: n8n
