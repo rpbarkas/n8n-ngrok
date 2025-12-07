@@ -7,7 +7,7 @@ services:
     plan: free
     envVars:
       - key: NGROK_AUTHTOKEN
-        sync: true
+        sync: false
     startCommand: ngrok http --log=stdout n8n:5678
 
   - type: web
