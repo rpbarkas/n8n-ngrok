@@ -8,10 +8,7 @@ services:
     envVars:
       - key: NGROK_AUTHTOKEN
         sync: false
-    startCommand: >
-      ngrok http 5678
-      --authtoken $NGROK_AUTHTOKEN
-      --log=stdout
+    dockerCommand: ngrok http 5678 --authtoken $NGROK_AUTHTOKEN --log=stdout
 
   - type: web
     name: n8n
